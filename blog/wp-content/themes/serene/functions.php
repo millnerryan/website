@@ -140,7 +140,7 @@ function et_load_serene_scripts() {
 	wp_enqueue_style( 'bootstrap-css' );
 }
 add_action( 'wp_enqueue_scripts', 'et_load_serene_scripts' );
-
+remove_filter('the_content', 'wpautop');
 if ( ! function_exists( 'et_get_theme_version' ) ) :
 function et_get_theme_version() {
 	$theme_info = wp_get_theme();
